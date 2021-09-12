@@ -13,6 +13,11 @@ import { SignupComponent } from './account/signup/signup.component';
 
 import  firebase from "firebase/app";
 import 'firebase/auth';
+import { ComponentComponent } from './component/component.component';
+import { HeaderComponent } from './component/header/header.component';
+import { FooterComponent } from './component/footer/footer.component';
+import { ProfileComponent } from './component/profile/profile.component';
+import { JokesComponent } from './component/jokes/jokes.component';
 // Your web app's Firebase configuration
 const config = {
   apiKey: "AIzaSyAhJWDjBIH9e5DeYyl7rd6wPXLd0XENwf4",
@@ -31,7 +36,12 @@ firebase.initializeApp(config);
     NotFoundComponent,
     AccountComponent,
     LoginComponent,
-    SignupComponent
+    SignupComponent,
+    ComponentComponent,
+    HeaderComponent,
+    FooterComponent,
+    ProfileComponent,
+    JokesComponent
   ],
   imports: [
     MaterialModule,

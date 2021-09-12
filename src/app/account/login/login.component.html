@@ -38,10 +38,10 @@
       </mat-form-field><br>
 
       <button mat-raised-button color="primary" (click)="login(loginForm.value)" [disabled]="loginForm.invalid" >login</button>
-
-      <div *ngIf="message">{{message}}</div>
-      <div *ngIf="userError!=undefined">{{userError}}</div>
-      <div class="signup">New to just-smile? Sign up.<span>Sign up.</span></div>
+      <div class="loginMessage" *ngIf="message=='loggin...'">{{message}}</div>
+      <div class="message" *ngIf="message && message!='loggin...'">{{message}}</div>
+      <div class="userError" *ngIf="userError!=undefined">{{userError}}</div>
+      <div class="signup">New to just-smile? <span>Sign up.</span></div>
     </form>
   </mat-card>
 </div>

@@ -40,12 +40,23 @@ export class SignupComponent implements OnInit {
         photoURL:'../../../assets/face/boy-pack'+randomNumber+'.png',
       }).then(()=>{
         this.message="signed up successfully."
+        this.deleteMessage()
       })
     },err=>{
       console.log(err);
       this.message="";
       this.userError=err.message;
+      this.deleteMessage()
     })
+  }
+
+  deleteMessage()
+  {
+    setTimeout(() =>
+    {
+      this.message=""
+      this.userError=undefined
+    },2000)
   }
 
 }

@@ -25,11 +25,14 @@
 
       <button mat-raised-button color="primary" (click)="signup(signupForm.value)" [disabled]="signupForm.invalid" >Create</button>
 
-      <div *ngIf="message">{{message}}</div>
-      <div *ngIf="userError!=undefined">{{userError}}</div>
+      <div class="signupMessage" *ngIf="message=='loggin...'">{{message}}</div>
+      <div class="message" *ngIf="message && message!='Signup...'">{{message}}</div>
+      <div class="userError" *ngIf="userError!=undefined">{{userError}}</div>
       <div class="login">Already have an account? <span>Log in.</span></div>
+
     </form>
   </mat-card>
 </div>
+
 
 

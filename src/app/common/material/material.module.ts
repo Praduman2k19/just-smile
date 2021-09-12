@@ -53,7 +53,8 @@ import { MatFormFieldModule } from '@angular/material/form-field';
     CommonModule,
     MatButtonModule,
     MatInputModule,
-    MatCardModule
+    MatCardModule,
+    MatDialogModule
   ]
 })
 export class MaterialModule { }
