@@ -11,6 +11,20 @@ import { AccountComponent } from './account/account.component';
 import { LoginComponent } from './account/login/login.component';
 import { SignupComponent } from './account/signup/signup.component';
 
+import  firebase from "firebase/app";
+import 'firebase/auth';
+// Your web app's Firebase configuration
+const config = {
+  apiKey: "AIzaSyAhJWDjBIH9e5DeYyl7rd6wPXLd0XENwf4",
+  authDomain: "just-smile7.firebaseapp.com",
+  projectId: "just-smile7",
+  storageBucket: "just-smile7.appspot.com",
+  messagingSenderId: "944165249948",
+  appId: "1:944165249948:web:0213d634f0aa52ec4e9e59"
+};
+
+firebase.initializeApp(config);
+
 @NgModule({
   declarations: [
     AppComponent,

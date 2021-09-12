@@ -1,14 +1,24 @@
-.login
+.account
 {
-  background: rgb(207, 185, 185);
+  background: rgb(94, 91, 117);
   width: 100vw;
   height: 100vh;
-  .loginForm{
-    background: white;
-    width: 300px;
-    border-radius: 50px;
-    position: relative;
-    top: 200px;
-    left: 60%;
+  .form{
+    display: flex;
+    justify-content: space-around;
+    .loginForm{
+      width: 300px;
+      border-radius: 4px;
+      position: relative;
+      height: 200px;
+      top: 200px;
+    }
+    .signupForm
+    {
+      width: 300px;
+      border-radius: 4px;
+      position: relative;
+      top: 200px;
+    }
   }
 }

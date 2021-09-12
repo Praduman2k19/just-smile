@@ -1,4 +1,4 @@
-<div class="login">
+<!-- <div class="login">
   <div class="heading">
     <h2>Login Form</h2>
   </div>
@@ -16,5 +16,33 @@
 
     <button mat-raised-button (click)="login(loginForm.value)" [disabled]="loginForm.invalid" >Login</button>
   </form>
+</div> -->
+
+
+
+<div class="login">
+  <mat-card>
+    <div class="heading">
+      <h2>Create Account</h2>
+    </div>
+    <form [formGroup]="loginForm">
+
+      <mat-form-field class="formInput">
+        <mat-label>Email</mat-label>
+        <input matInput type="email" formControlName="email" required>
+      </mat-form-field>
+
+      <mat-form-field class="formInput">
+        <mat-label>Password</mat-label>
+        <input matInput type="password" formControlName="password" required>
+      </mat-form-field><br>
+
+      <button mat-raised-button color="primary" (click)="login(loginForm.value)" [disabled]="loginForm.invalid" >login</button>
+
+      <div *ngIf="message">{{message}}</div>
+      <div *ngIf="userError!=undefined">{{userError}}</div>
+      <div class="signup">New to just-smile? Sign up.<span>Sign up.</span></div>
+    </form>
+  </mat-card>
 </div>
 

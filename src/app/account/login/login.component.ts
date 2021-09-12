@@ -7,7 +7,8 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
-
+  message:string=""
+  userError:any
   loginForm:FormGroup=new FormGroup({})
   constructor(private formBuilder:FormBuilder) {
     this.createForm();

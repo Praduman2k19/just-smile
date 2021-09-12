@@ -1,1 +1,35 @@
-<p>signup works!</p>
+<div class="signup">
+  <mat-card>
+    <div class="heading">
+      <h2>Create Account</h2>
+    </div>
+    <form [formGroup]="signupForm">
+      <mat-form-field class="formInput">
+        <mat-label>Firstname</mat-label>
+        <input matInput type="text" formControlName="firstName" required>
+      </mat-form-field>
+      <mat-form-field class="formInput">
+        <mat-label>Lastname</mat-label>
+        <input matInput type="text" formControlName="lastName" required>
+      </mat-form-field>
+
+      <mat-form-field class="formInput">
+        <mat-label>Email</mat-label>
+        <input matInput type="email" formControlName="email" required>
+      </mat-form-field>
+
+      <mat-form-field class="formInput">
+        <mat-label>Password</mat-label>
+        <input matInput type="password" formControlName="password" required>
+      </mat-form-field><br>
+
+      <button mat-raised-button color="primary" (click)="signup(signupForm.value)" [disabled]="signupForm.invalid" >Create</button>
+
+      <div *ngIf="message">{{message}}</div>
+      <div *ngIf="userError!=undefined">{{userError}}</div>
+      <div class="login">Already have an account? <span>Log in.</span></div>
+    </form>
+  </mat-card>
+</div>
+
+

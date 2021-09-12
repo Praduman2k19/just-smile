@@ -1,0 +1,37 @@
+
+.signup
+{
+  mat-card{
+    padding: 30px 0px;
+    .heading{
+      display: flex;
+      justify-content: center;
+      h2{
+        font-size: 24px;
+      }
+    }
+    form{
+      padding: 0% 20px;
+    }
+    .formInput{
+      width: 100%;
+    }
+
+    button{
+      // background: rgb(118, 131, 190);
+      width: 100%;
+      border-radius: 50px;
+      color: white;
+    }
+
+    .login{
+      margin-top: 20px;
+      display: flex;
+      justify-content: center;
+      span{
+        cursor: pointer;
+        color: blue;
+      }
+    }
+  }
+}
