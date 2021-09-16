@@ -5,15 +5,14 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
+
+
+
 import { AppComponent } from './app.component';
 import { NotFoundComponent } from './common/not-found/not-found.component';
 import { AccountComponent } from './account/account.component';
 import { LoginComponent } from './account/login/login.component';
 import { SignupComponent } from './account/signup/signup.component';
-
-import  firebase from "firebase/app";
-
-import 'firebase/auth';
 import { ComponentComponent } from './component/component.component';
 import { HeaderComponent } from './component/header/header.component';
 import { FooterComponent } from './component/footer/footer.component';
@@ -21,6 +20,12 @@ import { ProfileComponent } from './component/profile/profile.component';
 import { JokesComponent } from './component/jokes/jokes.component';
 import { NotificationsComponent } from './component/notifications/notifications.component';
 import { CreateJokeComponent } from './component/create-joke/create-joke.component';
+
+// import * as firebase from 'firebase/app'
+import  firebase from "firebase/app";
+import 'firebase/auth';
+
+
 // Your web app's Firebase configuration
 const config = {
   apiKey: "AIzaSyAhJWDjBIH9e5DeYyl7rd6wPXLd0XENwf4",
@@ -30,7 +35,6 @@ const config = {
   messagingSenderId: "944165249948",
   appId: "1:944165249948:web:0213d634f0aa52ec4e9e59"
 };
-
 firebase.initializeApp(config);
 
 @NgModule({

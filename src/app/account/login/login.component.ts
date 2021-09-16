@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import firebase from 'firebase';
+
+// import * as firebase from 'firebase/app'
+import  firebase from "firebase/app";
+import 'firebase/auth';
 
 
 @Component({
@@ -30,12 +33,13 @@ export class LoginComponent implements OnInit {
     this.message="loggin...";
     this.userError=undefined
     console.log(data);
-    firebase.auth().signInWithEmailAndPassword(data.email,data.password).then((res)=>{
+
+    firebase.auth().signInWithEmailAndPassword(data.email,data.password).then((res:any)=>{
       console.log(res);
       this.message="You have been logged in successfully.";
       this.deleteMessage()
 
-    },err=>{
+    },(err:any)=>{
       console.log(err);
       this.message="";
       this.userError=err.message

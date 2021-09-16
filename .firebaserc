@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "just-smile7": {
+      "hosting": {
+        "just-smile": [
+          "just-smile7"
+        ]
+      }
+    }
+  }
+}

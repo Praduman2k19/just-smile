@@ -1,7 +1,7 @@
 <div class="login">
   <mat-card>
     <div class="heading">
-      <h2>Create Account</h2>
+      <h2>Sign in</h2>
     </div>
     <form [formGroup]="loginForm">
 
@@ -19,7 +19,7 @@
       <div class="loginMessage" *ngIf="message=='loggin...'">{{message}}</div>
       <div class="message" *ngIf="message && message!='loggin...'">{{message}}</div>
       <div class="userError" *ngIf="userError!=undefined">{{userError}}</div>
-      <div class="signup">New to just-smile? <span>Sign up.</span></div>
+      <div class="signup">New to just-smile? <span> Sign up.</span></div>
     </form>
   </mat-card>
 </div>

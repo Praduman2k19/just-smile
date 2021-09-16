@@ -1,6 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import firebase from 'firebase';
+
+// import * as firebase from 'firebase/app'
+import  firebase from "firebase/app";
+import 'firebase/auth'
+
+import 'firebase/firestore'
+
 @Component({
   selector: 'app-signup',
   templateUrl: './signup.component.html',
@@ -32,7 +38,7 @@ export class SignupComponent implements OnInit {
     console.log(data);
     this.message="signed up..."
     this.userError=undefined
-    firebase.auth().createUserWithEmailAndPassword(data.email,data.password).then((res)=>{
+    firebase.auth().createUserWithEmailAndPassword(data.email,data.password).then((res:any)=>{
       console.log(res);
        let randomNumber=Math.floor(Math.random()*6)
       res.user?.updateProfile({
@@ -42,7 +48,7 @@ export class SignupComponent implements OnInit {
         this.message="signed up successfully."
         this.deleteMessage()
       })
-    },err=>{
+    },(err:any)=>{
       console.log(err);
       this.message="";
       this.userError=err.message;
