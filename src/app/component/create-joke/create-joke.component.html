@@ -1,0 +1,37 @@
+<div class="create-joke">
+  <div class="heading">
+    <h2>Post a Joke</h2>
+  </div>
+  <form [formGroup]="jokeForm">
+
+    <mat-form-field class="formInput">
+      <mat-label>Heading</mat-label>
+      <input matInput type="text" formControlName="heading">
+    </mat-form-field>
+
+    <mat-form-field class="formInput">
+      <mat-label>body-1</mat-label>
+      <input matInput type="text" formControlName="body1" required>
+      <mat-hint>ghvbm g jghfchj</mat-hint>
+    </mat-form-field>
+
+    <mat-form-field class="formInput">
+      <mat-label>body-2</mat-label>
+      <input matInput type="text" formControlName="body2">
+    </mat-form-field>
+
+    <!-- <ng-select [items]="JokeTypes" bindLabel="type" bindValue="type" floatLabel="true" placeholder="Joke type" formControlName="type" ></ng-select> -->
+    <mat-form-field class="formInput">
+      <mat-label>Favorite food</mat-label>
+      <mat-select formControlName="type">
+        <mat-option>--</mat-option>
+        <mat-option *ngFor="let item of JokeTypes" [value]="item.type">
+          {{item.type}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field><br>
+
+    <button mat-raised-button color="primary" (click)="postJoke(jokeForm.value)" [disabled]="jokeForm.invalid" >login</button>
+
+  </form>
+</div>

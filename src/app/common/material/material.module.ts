@@ -44,7 +44,7 @@ import {MatTooltipModule} from '@angular/material/tooltip';
 import {MatTreeModule} from '@angular/material/tree';
 import {OverlayModule} from '@angular/cdk/overlay';
 import { MatFormFieldModule } from '@angular/material/form-field';
-
+// import { NgSelectModule } from '@ng-select/ng-select';
 
 
 @NgModule({
@@ -54,7 +54,12 @@ import { MatFormFieldModule } from '@angular/material/form-field';
     MatButtonModule,
     MatInputModule,
     MatCardModule,
-    MatDialogModule
+    MatDialogModule,
+    MatIconModule,
+    MatBadgeModule,
+    MatMenuModule,
+    MatSelectModule
+
   ]
 })
 export class MaterialModule { }
